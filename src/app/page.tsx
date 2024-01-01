@@ -1,16 +1,16 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
-import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import { CommandMenu } from "@/components/command-menu"
+import { ProjectCard } from "@/components/project-card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Section } from "@/components/ui/section"
+import { RESUME_DATA } from "@/data/resume-data"
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title: `${RESUME_DATA.name} | Frontend-разработчик`,
   description: RESUME_DATA.summary,
 };
 
@@ -34,10 +34,10 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1 pt-4 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="h-8 w-8"
+                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
@@ -49,7 +49,7 @@ export default function Page() {
               ) : null}
               {RESUME_DATA.contact.tel ? (
                 <Button
-                  className="h-8 w-8"
+                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
@@ -62,12 +62,12 @@ export default function Page() {
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="h-8 w-8"
+                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
                 >
-                  <a href={social.url}>
+                  <a href={social.url} target="_blank">
                     <social.icon className="h-4 w-4" />
                   </a>
                 </Button>
@@ -87,19 +87,13 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="h-28 w-28">
+          <Avatar className="h-28 w-28 max-w-xs transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+        {/* <Section>
+          <h2 className="text-xl font-bold">Опыт Работы</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -137,9 +131,38 @@ export default function Page() {
               </Card>
             );
           })}
+        </Section> */}
+        <Section>
+          <h2 className="text-xl font-bold">Навыки</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.hard_skills.map((hard_skill) => {
+              return <Badge key={hard_skill}>{hard_skill}</Badge>;
+            })}
+          </div>
+          <div className="flex flex-wrap gap-1 py-3">
+            {RESUME_DATA.soft_skills.map((soft_skill) => {
+              return <Badge key={soft_skill}>{soft_skill}</Badge>;
+            })}
+          </div>
+        </Section>
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-xl font-bold">Проекты</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+            {RESUME_DATA.projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.techStack}
+                  link={"link" in project ? project.link.href : undefined}
+                />
+              );
+            })}
+          </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold">Образование</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -159,29 +182,10 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
-            })}
-          </div>
-        </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
-                />
-              );
-            })}
-          </div>
+          <h2 className="text-xl font-bold">Обо мне</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            {RESUME_DATA.summary}
+          </p>
         </Section>
       </section>
 
@@ -189,7 +193,7 @@ export default function Page() {
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
+            title: "Портфолио",
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,

@@ -35,12 +35,12 @@ export const CommandMenu = ({ links }: Props) => {
 
   return (
     <>
-      <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden xl:block">
-        Press{" "}
+      <p className="fixed backdrop-blur-2xl bottom-0 left-0 right-0 hidden border-t-2 solid border-t-muted p-1 text-center text-sm text-muted-foreground print:hidden xl:block">
+        Нажмите на {" "}
         <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>J
+          <span className="text-xs">⌘</span> + J
         </kbd>{" "}
-        to open the command menu
+        для открытия командного меню
       </p>
       <Button
         onClick={() => setOpen((open) => !open)}
@@ -51,20 +51,20 @@ export const CommandMenu = ({ links }: Props) => {
         <CommandIcon className="my-6 h-6 w-6" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Введите команду или выполните поиск..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Actions">
+          <CommandEmpty>Ничего не найдено</CommandEmpty>
+          <CommandGroup heading="Действии">
             <CommandItem
               onSelect={() => {
                 setOpen(false);
                 window.print();
               }}
             >
-              <span>Print</span>
+              <span>Печать...</span>
             </CommandItem>
           </CommandGroup>
-          <CommandGroup heading="Links">
+          <CommandGroup heading="Ссылки">
             {links.map(({ url, title }) => (
               <CommandItem
                 key={url}
