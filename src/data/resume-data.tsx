@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon, XIcon, TelegramIcon, VkontakteIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, TelegramIcon, VkontakteIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Гагик Антонян",
@@ -28,17 +28,12 @@ export const RESUME_DATA = {
         icon: LinkedInIcon,
       },
       {
-        name: "X",
-        url: "https://x.com/GagoAnto01",
-        icon: XIcon,
-      },
-      {
-        name: "Telegram",
+        name: "Профиль в Telegram",
         url: "https://t.me/doubleG_json",
         icon: TelegramIcon,
       },
       {
-        name: "VKontakte",
+        name: "Профиль в Вконтакте",
         url: "https://vk.com/ohmangod_damn",
         icon: VkontakteIcon,
       },
