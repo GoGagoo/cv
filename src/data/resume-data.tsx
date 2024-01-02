@@ -18,12 +18,12 @@ export const RESUME_DATA = {
     tel: "+7 995 566 5553",
     social: [
       {
-        name: "GitHub",
+        name: "Профиль в GitHub",
         url: "https://github.com/GoGagoo",
         icon: GitHubIcon,
       },
       {
-        name: "LinkedIn",
+        name: "Профиль в LinkedIn",
         url: "https://www.linkedin.com/in/gagikantonyan/",
         icon: LinkedInIcon,
       },
