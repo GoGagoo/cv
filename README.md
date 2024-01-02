@@ -1,67 +1,86 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
-
 # Minimalist CV
 
-Simple web app that renders minimalist CV with print-friendly layout.
+![cv](https://i.postimg.cc/LXNTdYTX/gogagoo-cv-vercel-app-1.png)
 
-Built with Next.js and shadcn/ui, deployed on Vercel.
+Добро пожаловать в репозиторий моего персонального сайта-резюме. Сайт представляет собой лендинг моего резюме, где есть разделы проектов, навыков и о себе. Резюме служит важным инструментом для презентации своего потенциала и привлечения внимания потенциальных работодателей или заказчиков.
 
-# Features
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Auto generated Layout
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Особенности
 
-# Getting Started Locally
+- Минималистический стиль;
+- Установка занимает всего несколько минут;
+- [Один файл конфигурации](./src/data/resume-data.tsx);
+- Отзывчивый для различных устройств;
+- Информация в резюме представлена ​​четко и кратко.
 
-1. Clone this repository to your local machine:
+
+  ## Справочник по цвету
+| Цвет             | Код цвета                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Основной цвет | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000 |
+| Вторичный цвет | ![#6B7280](https://via.placeholder.com/10/6B7280?text=+) #6B7280 |
+| Цвет заднего фона | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF |
+
+
+## Стек технологий
+
+Проект был разработан с использованием следующего стека технологий:
+
+### Фронтенд:
+
+- Фреймворк: [NextJs](https://nextjs.org/)
+- Стилизация:
+  - [TailwindCSS](https://tailwindcss.com/)
+  - [ShadCN/UI](https://ui.shadcn.com/)
+
+
+## Файловая структура проекта:
+
+
+```
+├── src
+│   ├── app
+         ├── layout.tsx
+         └── page.tsx
+│   ├── components
+│   │   ├── ui
+│   │   ├── command-menu.tsx
+│   │   ├── orint-drawer.tsx
+│   │   └── project-card.tsx
+│   ├── data
+│   │   └── resume-data.tsx
+└── next.config.js 
+ ```
+
+
+
+# Начало работы в локальном режиме
+
+1. Склонируйте этот репозиторий:
 
    ```bash
    git clone https://github.com/BartoszJarocki/cv.git
    ```
 
-2. Move to the cloned directory
+2. Перейдите в директорию склонированного проекта:
 
    ```bash
    cd cv
    ```
 
-3. Install dependencies:
+3. Установите зависимости:
 
    ```bash
    yarn install
    ```
 
-4. Start the local Server:
+4. Запустите приложение:
 
    ```bash
    yarn dev
    ```
 
-5. Open the [Config file](./src/data/resume-data.tsx) and make changes
-
-# Run with Docker
-
-Build the containewr
-
-```
-docker compose build
-```
-
-Run the container
-
-```
-docker compose up -d
-```
-
-Stop the Container
-
-```
-docker compose down 
-```
-
-# License
+   
+# Лицензия
 
 [MIT](https://choosealicense.com/licenses/mit/)
