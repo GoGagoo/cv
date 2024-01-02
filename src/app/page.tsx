@@ -134,12 +134,14 @@ export default function Page() {
         </Section> */}
         <Section>
           <h2 className="text-xl font-bold">Навыки</h2>
+          <h2 className="text-md font-bold">Hard Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.hard_skills.map((hard_skill) => {
               return <Badge key={hard_skill}>{hard_skill}</Badge>;
             })}
           </div>
-          <div className="flex flex-wrap gap-1 py-3">
+          <h2 className="text-md font-bold">Soft Skills</h2>
+          <div className="flex flex-wrap gap-1">
             {RESUME_DATA.soft_skills.map((soft_skill) => {
               return <Badge key={soft_skill}>{soft_skill}</Badge>;
             })}
