@@ -59,7 +59,7 @@
 1. Склонируйте этот репозиторий:
 
    ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
+   git clone https://github.com/GoGagoo/cv.git
    ```
 
 2. Перейдите в директорию склонированного проекта:
