@@ -1,4 +1,9 @@
-import { GitHubIcon, LinkedInIcon, TelegramIcon, VkontakteIcon } from "@/components/icons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  TelegramIcon,
+  VkontakteIcon,
+} from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Гагик Антонян",
@@ -77,13 +82,12 @@ export const RESUME_DATA = {
     "MongoDB",
     "HTML",
     "CSS",
-    
   ],
   soft_skills: [
     "Стремление к обучению",
     "Постоянное самосовершенствование",
     "Ответственный подход к работе",
-    "Легко нахожу общий язык с людьми"
+    "Легко нахожу общий язык с людьми",
   ],
   projects: [
     {
@@ -96,29 +100,31 @@ export const RESUME_DATA = {
       ],
       description: "Мое личное портфолио с анимацией",
       link: {
-        label: "gogagoo-portfolio.vercel.app",
         href: "https://gogagoo-portfolio.vercel.app/",
       },
     },
     {
       title: "Pizza Mizza",
-      techStack: ["Pet Project", "TypeScript", "React.JS", "Axios", "Redux Toolkit"],
-      description:
-        "Несложный сайт доставки пиццы с авторизацией и корзиной",
+      techStack: [
+        "Pet Project",
+        "TypeScript",
+        "React.js",
+        "Axios",
+        "Redux Toolkit",
+      ],
+      description: "Несложный сайт доставки пиццы с авторизацией и корзиной",
       link: {
-        label: "pizza-mizza-app.vercel.app",
         href: "https://pizza-mizza-app.vercel.app/",
       },
     },
-    // {
-    //   title: "Jarocki.me",
-    //   techStack: ["Side Project", "Next.js", "MDX"],
-    //   description:
-    //     "My personal website and blog. Built with Next.js and Notion API",
-    //   link: {
-    //     label: "github.com",
-    //     href: "https://jarocki.me/",
-    //   },
-    // },
+    {
+      title: "React Search Input",
+      techStack: ["Test Task", "React.js", "swapi.dev API", "TailwindCSS"],
+      description:
+        `Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания`,
+      link: {
+        href: "https://gogagoo-react-input.vercel.app/",
+      },
+    },
   ],
 } as const;
