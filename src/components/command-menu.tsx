@@ -54,16 +54,6 @@ export const CommandMenu = ({ links }: Props) => {
         <CommandInput placeholder="Введите команду или выполните поиск..." />
         <CommandList>
           <CommandEmpty>Ничего не найдено</CommandEmpty>
-          <CommandGroup heading="Действии">
-            <CommandItem
-              onSelect={() => {
-                setOpen(false);
-                window.print();
-              }}
-            >
-              <span>Печать...</span>
-            </CommandItem>
-          </CommandGroup>
           <CommandGroup heading="Ссылки">
             {links.map(({ url, title }) => (
               <CommandItem
