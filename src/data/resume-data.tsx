@@ -11,9 +11,9 @@ export const RESUME_DATA = {
   location: "Екатеринбург, Россия, UTC+4",
   locationLink: "https://www.google.com/maps/place/Yekaterinburg",
   // поменять местами about и summary
-  about: "Front-end Разработчик. Всегда открыт для новых возможностей.",
+  summary: "Front-end Разработчик. Всегда открыт для новых возможностей.",
   //
-  summary:
+  about:
     "Меня зовут Гагик. Я Frontend-разработчик с энтузиазмом к созданию красивых и функциональных веб-приложений. Мое увлечение веб-разработкой началось в колледже, где изучал HTML, CSS и JavaScript, а также React.js и его экосистему. Сейчас совершенствуюсь в направлении Front-end разработки. Если вы заинтересованы в моих навыках, свяжитесь со мной.",
   avatarUrl: "https://avatars.githubusercontent.com/u/101787513?v=4",
   // portfolio
