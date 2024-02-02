@@ -3,7 +3,7 @@ import {
   LinkedInIcon,
   TelegramIcon,
   VkontakteIcon,
-} from "@/components/icons";
+} from "@/components/icons"
 
 export const RESUME_DATA = {
   name: "Гагик Антонян",
@@ -124,6 +124,15 @@ export const RESUME_DATA = {
         `Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания`,
       link: {
         href: "https://gogagoo-react-input.vercel.app/",
+      },
+    },
+    {
+      title: "GitHub Ninja",
+      techStack: ["Pet Project", "Next.js", "GitHub REST API", "ChakraUI"],
+      description:
+        'Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.',
+      link: {
+        href: "https://github-ninja.vercel.app/",
       },
     },
   ],
