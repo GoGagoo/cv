@@ -48,12 +48,14 @@ export const RESUME_DATA = {
     // вместо school другое
     {
       school: "Уральский Федеральный Университет им. Б.Н. Ельцина",
+      link: 'https://urfu.ru',
       degree: "Бакалавр по специальности «Прикладная информатика»",
       start: "2023",
       end: "2027",
     },
     {
       school: "Уральский Государственный Колледж им. И.И. Ползунова",
+      link: 'https://ugkp.ru/',
       degree:
         "Средне-специальное образование по специальности «Программирование в компьютерных системах»",
       start: "2019",
@@ -75,11 +77,12 @@ export const RESUME_DATA = {
   // ],
   hard_skills: [
     // "Vue",
-    "React",
+    "React.js",
     "Next.js",
     "TypeScript",
     "JavaScript",
     "MongoDB",
+    "Git",
     "HTML",
     "CSS",
   ],
@@ -94,13 +97,13 @@ export const RESUME_DATA = {
       title: "GoGagoo Porfolio",
       techStack: [
         "Pet Project",
+        "TypeScript",
         "Next.js",
         "Framer Motion",
-        "React Type Animation",
       ],
       description: "Мое личное портфолио с анимацией",
       link: {
-        href: "https://gogagoo-portfolio.vercel.app/",
+        href: "https://anim-portfolio.vercel.app/",
       },
     },
     {

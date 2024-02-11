@@ -1,13 +1,14 @@
-import { CommandMenu } from "@/components/command-menu"
-import { ProjectCard } from "@/components/project-card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Section } from "@/components/ui/section"
-import { RESUME_DATA } from "@/data/resume-data"
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
-import { Metadata } from "next"
+import { CommandMenu } from "@/components/command-menu";
+import { ProjectCard } from "@/components/project-card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Section } from "@/components/ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | Frontend-разработчик`,
@@ -37,7 +38,7 @@ export default function Page() {
             <div className="flex gap-x-1 pt-4 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
+                  className="all 0.2s h-8 w-8 transition ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
@@ -49,7 +50,7 @@ export default function Page() {
               ) : null}
               {RESUME_DATA.contact.tel ? (
                 <Button
-                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
+                  className="all 0.2s h-8 w-8 transition ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
@@ -62,7 +63,7 @@ export default function Page() {
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="h-8 w-8 transition all 0.2s ease-in-out hover:-translate-y-2"
+                  className="all 0.2s h-8 w-8 transition ease-in-out hover:-translate-y-2"
                   variant="outline"
                   size="icon"
                   asChild
@@ -170,9 +171,11 @@ export default function Page() {
               <Card key={education.school}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
+                    <Link href={education.link}>
+                      <h3 className="font-semibold leading-none hover:text-gray-500 hover:underline">
+                        {education.school}
+                      </h3>
+                    </Link>
                     <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
                     </div>
