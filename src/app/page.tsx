@@ -1,19 +1,19 @@
-import { CommandMenu } from "@/components/command-menu";
-import { ProjectCard } from "@/components/project-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Metadata } from "next";
-import Link from "next/link";
+import { CommandMenu } from "@/components/command-menu"
+import { ProjectCard } from "@/components/project-card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Section } from "@/components/ui/section"
+import { RESUME_DATA } from "@/data/resume-data"
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
+import { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | Frontend-разработчик`,
   description: RESUME_DATA.summary,
-};
+}
 
 export default function Page() {
   return (
@@ -130,7 +130,7 @@ export default function Page() {
                   {work.description}
                 </CardContent>
               </Card>
-            );
+            )
           })}
         </Section> */}
         <Section>
@@ -138,13 +138,13 @@ export default function Page() {
           <h2 className="text-md font-bold">Hard Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.hard_skills.map((hard_skill) => {
-              return <Badge key={hard_skill}>{hard_skill}</Badge>;
+              return <Badge key={hard_skill}>{hard_skill}</Badge>
             })}
           </div>
           <h2 className="text-md font-bold">Soft Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.soft_skills.map((soft_skill) => {
-              return <Badge key={soft_skill}>{soft_skill}</Badge>;
+              return <Badge key={soft_skill}>{soft_skill}</Badge>
             })}
           </div>
         </Section>
@@ -160,7 +160,7 @@ export default function Page() {
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
                 />
-              );
+              )
             })}
           </div>
         </Section>
@@ -168,12 +168,12 @@ export default function Page() {
           <h2 className="text-xl font-bold">Образование</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
+              <Card key={education.university}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <Link href={education.link}>
                       <h3 className="font-semibold leading-none hover:text-gray-500 hover:underline">
-                        {education.school}
+                        {education.university}
                       </h3>
                     </Link>
                     <div className="text-sm tabular-nums text-gray-500">
@@ -183,7 +183,7 @@ export default function Page() {
                 </CardHeader>
                 <CardContent className="mt-2">{education.degree}</CardContent>
               </Card>
-            );
+            )
           })}
         </Section>
         <Section>
@@ -197,7 +197,7 @@ export default function Page() {
       <CommandMenu
         links={[
           {
-            url: RESUME_DATA.personalWebsiteUrl,
+            url: RESUME_DATA.portfolio,
             title: "Портфолио",
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
@@ -207,5 +207,5 @@ export default function Page() {
         ]}
       />
     </main>
-  );
+  )
 }

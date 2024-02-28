@@ -4,14 +4,14 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
+} from "./ui/card"
+import { Badge } from "./ui/badge"
 
 interface Props {
-  title: string;
-  description: string;
-  tags: readonly string[];
-  link?: string;
+  title: string
+  description: string
+  tags: readonly string[]
+  link?: string
 }
 
 export function ProjectCard({ title, description, tags, link }: Props) {
@@ -54,5 +54,5 @@ export function ProjectCard({ title, description, tags, link }: Props) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

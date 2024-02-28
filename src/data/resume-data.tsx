@@ -10,14 +10,12 @@ export const RESUME_DATA = {
   initials: "GA",
   location: "Екатеринбург, Россия, UTC+4",
   locationLink: "https://www.google.com/maps/place/Yekaterinburg",
-  // поменять местами about и summary
   summary: "Front-end Разработчик. Всегда открыт для новых возможностей.",
   //
   about:
-    "Меня зовут Гагик. Я Frontend-разработчик с энтузиазмом к созданию красивых и функциональных веб-приложений. Мое увлечение веб-разработкой началось в колледже, где изучал HTML, CSS и JavaScript, а также React.js и его экосистему. Сейчас совершенствуюсь в направлении Front-end разработки. Если вы заинтересованы в моих навыках, свяжитесь со мной.",
+    "Меня зовут Гагик. Я студент на заочном обучении и ищу работу на позицию Frontend-разработчик в продуктовой компании или на аутсорсинг. В работе ценю хороший код, замечательных коллег и отлаженные процессы. Мне важно получить опыт, а трудности меня не пугают:) Буду рад знакомству!",
   avatarUrl: "https://avatars.githubusercontent.com/u/101787513?v=4",
-  // portfolio
-  personalWebsiteUrl: "https://gogagoo-portfolio.vercel.app/",
+  portfolio: "https://gogagoo-portfolio.vercel.app/",
   contact: {
     email: "gagika57@gmail.com",
     tel: "+7 995 566 5553",
@@ -45,17 +43,16 @@ export const RESUME_DATA = {
     ],
   },
   education: [
-    // вместо school другое
     {
-      school: "Уральский Федеральный Университет им. Б.Н. Ельцина",
-      link: 'https://urfu.ru',
+      university: "Уральский Федеральный Университет им. Б.Н. Ельцина",
+      link: "https://urfu.ru",
       degree: "Бакалавр по специальности «Прикладная информатика»",
       start: "2023",
       end: "2027",
     },
     {
-      school: "Уральский Государственный Колледж им. И.И. Ползунова",
-      link: 'https://ugkp.ru/',
+      university: "Уральский Государственный Колледж им. И.И. Ползунова",
+      link: "https://ugkp.ru/",
       degree:
         "Средне-специальное образование по специальности «Программирование в компьютерных системах»",
       start: "2019",
@@ -69,8 +66,8 @@ export const RESUME_DATA = {
   //     // badges: ["Remote"] || badges: []
   //     badges: [],
   //     title: "Front-end Developer",
-  //     start: "202",
-  //     end: "202",
+  //     start: "2023",
+  //     end: "2023",
   //     description:
   //       "Внедрял новые функции, руководил отрядом, работал над улучшением способа отправки кода разработчиками, начал миграцию с Emotion на Tailwind CSS и многое другое. Технологии: React, TypeScript, GraphQL",
   //   },
@@ -95,12 +92,7 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "GoGagoo Porfolio",
-      techStack: [
-        "Pet Project",
-        "TypeScript",
-        "Next.js",
-        "Framer Motion",
-      ],
+      techStack: ["Pet Project", "TypeScript", "Next.js", "Framer Motion"],
       description: "Мое личное портфолио с анимацией",
       link: {
         href: "https://anim-portfolio.vercel.app/",
@@ -123,8 +115,7 @@ export const RESUME_DATA = {
     {
       title: "React Search Input",
       techStack: ["Test Task", "React.js", "swapi.dev API", "TailwindCSS"],
-      description:
-        `Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания`,
+      description: `Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания`,
       link: {
         href: "https://gogagoo-react-input.vercel.app/",
       },
@@ -133,10 +124,10 @@ export const RESUME_DATA = {
       title: "GitHub Ninja",
       techStack: ["Pet Project", "Next.js", "GitHub REST API", "ChakraUI"],
       description:
-        'Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.',
+        "Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.",
       link: {
         href: "https://github-ninja.vercel.app/",
       },
     },
   ],
-} as const;
+} as const
