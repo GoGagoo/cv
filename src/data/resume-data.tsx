@@ -3,6 +3,7 @@ import {
   LinkedInIcon,
   TelegramIcon,
   VkontakteIcon,
+  WakatimeIcon,
 } from "@/components/icons"
 
 export const RESUME_DATA = {
@@ -39,6 +40,11 @@ export const RESUME_DATA = {
         name: "Профиль в Вконтакте",
         url: "https://vk.com/ohmangod_damn",
         icon: VkontakteIcon,
+      },
+      {
+        name: "Профиль в Wakatime",
+        url: "https://wakatime.com/@GoGago",
+        icon: WakatimeIcon,
       },
     ],
   },
