@@ -4,7 +4,7 @@ import {
   TelegramIcon,
   VkontakteIcon,
   WakatimeIcon,
-} from "@/components/icons"
+} from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Гагик Антонян",
@@ -14,7 +14,7 @@ export const RESUME_DATA = {
   summary: "Front-end Разработчик. Всегда открыт для новых возможностей.",
   //
   about:
-    "Меня зовут Гагик. Я студент на заочном обучении и ищу работу на позицию Frontend-разработчик в продуктовой компании или на аутсорсинг. В работе ценю хороший код, замечательных коллег и отлаженные процессы. Мне важно получить опыт, а трудности меня не пугают:) Буду рад знакомству!",
+    "Меня зовут Гагик. Я студент на заочном обучении и ищу работу на позицию Frontend-разработчик в продуктовой компании или на аутсорсинг. В работе ценю хороший код и замечательных коллег. Мне важно получить опыт, а трудности меня не пугают:) Буду рад знакомству!",
   avatarUrl: "https://avatars.githubusercontent.com/u/101787513?v=4",
   portfolio: "https://gogagoo-portfolio.vercel.app/",
   contact: {
@@ -52,7 +52,7 @@ export const RESUME_DATA = {
     {
       university: "Уральский Федеральный Университет им. Б.Н. Ельцина",
       link: "https://urfu.ru",
-      degree: "Бакалавр по специальности «Прикладная информатика»",
+      degree: "Бакалавр по специальности «Прикладная информатика» (заочно)",
       start: "2023",
       end: "2027",
     },
@@ -60,7 +60,7 @@ export const RESUME_DATA = {
       university: "Уральский Государственный Колледж им. И.И. Ползунова",
       link: "https://ugkp.ru/",
       degree:
-        "Средне-специальное образование по специальности «Программирование в компьютерных системах»",
+        "Средне-специальное образование по специальности «Программирование в компьютерных системах» (очно)",
       start: "2019",
       end: "2023",
     },
@@ -97,6 +97,37 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Vue Sneakers",
+      techStack: [
+        "Course Project",
+        "Vue.js",
+        "MOKKY.DEV API",
+        "TailwindCSS",
+        "auto-animate",
+      ],
+      description: "Сайт интернет-магазин кроссовок для курсовой работы",
+      link: {
+        href: "https://cp-vue-sneakers-shop.vercel.app/",
+      },
+    },
+    {
+      title: "GitHub Ninja",
+      techStack: ["Pet Project", "Next.js", "GitHub REST API", "ChakraUI"],
+      description:
+        "Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.",
+      link: {
+        href: "https://github-ninja.vercel.app/",
+      },
+    },
+    {
+      title: "React Search Input",
+      techStack: ["Test Task", "React.js", "swapi.dev API", "TailwindCSS"],
+      description: 'Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания',
+      link: {
+        href: "https://gogagoo-react-input.vercel.app/",
+      },
+    },
+    {
       title: "GoGagoo Porfolio",
       techStack: ["Pet Project", "TypeScript", "Next.js", "Framer Motion"],
       description: "Мое личное портфолио с анимацией",
@@ -118,22 +149,5 @@ export const RESUME_DATA = {
         href: "https://pizza-mizza-app.vercel.app/",
       },
     },
-    {
-      title: "React Search Input",
-      techStack: ["Test Task", "React.js", "swapi.dev API", "TailwindCSS"],
-      description: `Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания`,
-      link: {
-        href: "https://gogagoo-react-input.vercel.app/",
-      },
-    },
-    {
-      title: "GitHub Ninja",
-      techStack: ["Pet Project", "Next.js", "GitHub REST API", "ChakraUI"],
-      description:
-        "Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.",
-      link: {
-        href: "https://github-ninja.vercel.app/",
-      },
-    },
   ],
-} as const
+} as const;
