@@ -97,6 +97,22 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "FastAPI Country Search",
+      techStack: [
+        "Pet Project",
+        "Next.js",
+        "Heno",
+        "Cloudflare",
+        "Upstash Redis",
+        "shadcn-ui",
+        "TailwindCSS",
+      ],
+      description: "Высокопроизводительный API для поиска стран. Работает с VPN! [ENG]",
+      link: {
+        href: "https://fastapi-counrties.vercel.app/",
+      },
+    },
+    {
       title: "Vue Sneakers",
       techStack: [
         "Course Project",
@@ -114,7 +130,7 @@ export const RESUME_DATA = {
       title: "GitHub Ninja",
       techStack: ["Pet Project", "Next.js", "GitHub REST API", "ChakraUI"],
       description:
-        "Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию.",
+        "Небольшой сайт, благодаря которому можно получить профиль  Github пользователя и другую информацию. [ENG]",
       link: {
         href: "https://github-ninja.vercel.app/",
       },
@@ -122,7 +138,8 @@ export const RESUME_DATA = {
     {
       title: "React Search Input",
       techStack: ["Test Task", "React.js", "swapi.dev API", "TailwindCSS"],
-      description: 'Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания',
+      description:
+        'Сайт-поисковик, разработанный для компании АО "ЛОТОС" в качестве тестового задания [ENG]',
       link: {
         href: "https://gogagoo-react-input.vercel.app/",
       },
@@ -130,7 +147,7 @@ export const RESUME_DATA = {
     {
       title: "GoGagoo Porfolio",
       techStack: ["Pet Project", "TypeScript", "Next.js", "Framer Motion"],
-      description: "Мое личное портфолио с анимацией",
+      description: "Мое личное портфолио с анимацией [ENG]",
       link: {
         href: "https://anim-portfolio.vercel.app/",
       },
