@@ -75,6 +75,10 @@
   }
 }
 
+* {
+  @apply transition-colors duration-100;
+}
+
 .print-force-new-page {
   page-break-before: always;
 }
@@ -92,7 +96,6 @@
   background-color: #ccc;
   border-radius: 25px;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #999;

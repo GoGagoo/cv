@@ -46,9 +46,9 @@ export const CommandMenu = ({ links }: Props) => {
         onClick={() => setOpen((open) => !open)}
         variant="outline"
         size="icon"
-        className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
+        className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden dark:bg-[#96999E]"
       >
-        <CommandIcon className="my-6 h-6 w-6" />
+        <CommandIcon className="my-6 size-6" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Введите команду или выполните поиск..." />
