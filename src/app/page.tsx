@@ -8,20 +8,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { RESUME_DATA } from "@/data/resume-data"
+import useDarkMode from '@/hooks/useDarkMode'
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
 
 export default function Page() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.body.classList.toggle("dark", !darkMode)
-  }
+  const [darkMode, toggleDarkMode] = useDarkMode()
 
   return (
-    <main className={`${darkMode && "dark"}`}>
+    <main className={`${darkMode ? "dark" : ""}`}>
       <section className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 dark:bg-[#030712]">
         <div className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6 dark:bg-[#030712]">
           <div className="flex items-center justify-between">
