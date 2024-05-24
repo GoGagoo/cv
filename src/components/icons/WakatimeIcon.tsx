@@ -16,5 +16,5 @@ export const WakatimeIcon = (props: React.SVGProps<SVGSVGElement>) => {
         ></path>
       </g>
     </svg>
-  );
-};
+  )
+}

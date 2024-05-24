@@ -4,7 +4,7 @@ import {
   TelegramIcon,
   VkontakteIcon,
   WakatimeIcon,
-} from "@/components/icons";
+} from "@/components/icons"
 
 export const RESUME_DATA = {
   name: "Гагик Антонян",
@@ -167,4 +167,4 @@ export const RESUME_DATA = {
       },
     },
   ],
-} as const;
+} as const
