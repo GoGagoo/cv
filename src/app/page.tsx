@@ -17,7 +17,7 @@ export default function Page() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
-    document.body.classList.toggle('dark', !darkMode)
+    document.body.classList.toggle("dark", !darkMode)
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Page() {
             <div className="flex-1 space-y-1.5">
               <button
                 onClick={toggleDarkMode}
-                className="h-5 w-10 rounded-full bg-neutral-900 font-semibold text-white outline-none duration-200 animate-in hover:bg-neutral-300 active:bg-neutral-300 sm:right-16 sm:h-8 sm:w-14 dark:bg-slate-200 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-300"
+                className="h-6 w-12 rounded-full bg-neutral-900 font-semibold text-white outline-none duration-200 animate-in hover:bg-neutral-300 active:bg-neutral-300 sm:right-16 sm:h-8 sm:w-14 dark:bg-slate-200 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-300"
               >
                 {darkMode ? "СВЛ" : "ТМН"}
               </button>
