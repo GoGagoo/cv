@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { RESUME_DATA } from "@/data/resume-data"
-import useDarkMode from '@/hooks/useDarkMode'
+import useDarkMode from "@/hooks/useDarkMode"
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
 import Link from "next/link"
 
@@ -17,13 +17,13 @@ export default function Page() {
 
   return (
     <main className={`${darkMode ? "dark" : ""}`}>
-      <section className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 dark:bg-[#030712]">
-        <div className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6 dark:bg-[#030712]">
+      <section className="container relative mx-auto scroll-my-12 overflow-auto p-4 dark:bg-[#030712] md:p-16 print:p-12">
+        <div className="mx-auto w-full max-w-2xl space-y-8 bg-white dark:bg-[#030712] print:space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex-1 space-y-1.5">
               <button
                 onClick={toggleDarkMode}
-                className="h-6 w-12 rounded-full bg-neutral-900 font-semibold text-white outline-none duration-200 animate-in hover:bg-neutral-300 active:bg-neutral-300 sm:right-16 sm:h-8 sm:w-14 dark:bg-slate-200 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-300"
+                className="h-6 w-12 rounded-full bg-neutral-900 font-semibold text-white outline-none duration-200 animate-in hover:bg-neutral-300 active:bg-neutral-300 dark:bg-slate-200 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-300 sm:right-16 sm:h-8 sm:w-14"
               >
                 {darkMode ? "СВЛ" : "ТМН"}
               </button>
@@ -164,7 +164,7 @@ export default function Page() {
           </Section>
           <Section className="print-force-new-page scroll-mb-16">
             <h2 className="text-xl font-bold dark:text-slate-200">Проекты</h2>
-            <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+            <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
               {RESUME_DATA.projects.map((project) => {
                 return (
                   <ProjectCard
@@ -206,6 +206,9 @@ export default function Page() {
             <h2 className="text-xl font-bold dark:text-slate-200">Обо мне</h2>
             <p className="text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
+            </p>
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.sub_about}
             </p>
           </Section>
         </div>
